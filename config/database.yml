@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: utf-8
+  username: postgres
+  password: newpassword
+  database: raptor_dev
+  pool: 5
+  host: localhost
+  port: 5432
+  schema_search_path: "public"
+
+test: &test
+  adapter: postgresql
+  username: postgres
+  password: newpassword
+  encoding: utf-8
+  database: raptor_test
+  pool: 5
+  host: localhost
+  port: 5432
+  schema_search_path: "public"
+#  Opt-in for use with vagrant
+#  user: 'postgres'
+#  password: 'password'
+cucumber:
+  <<: *test
