@@ -17,5 +17,7 @@
 !/log/.keep
 !/tmp/.keep
 /.idea/*
+/initializers/devise.rb
+
 # Ignore Byebug command history file.
 .byebug_history
