@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title NWRaptor
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    = render 'layouts/navbar'
+    .content
+      = yield
+    = render 'layouts/footer'
