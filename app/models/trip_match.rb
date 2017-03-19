@@ -1,0 +1,2 @@
+class TripMatch < ApplicationRecord
+end
