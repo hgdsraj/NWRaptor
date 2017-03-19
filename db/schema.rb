@@ -27,9 +27,9 @@ ActiveRecord::Schema.define(version: 20170319060300) do
   end
 
   create_table "moji_vehicles", force: :cascade do |t|
-    t.integer  "user_id",         null: false
+    t.integer  "user_id"
     t.string   "moji_vehicle_id", null: false
-    t.integer  "fuel_efficiency", null: false
+    t.integer  "fuel_efficiency"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
@@ -37,16 +37,17 @@ ActiveRecord::Schema.define(version: 20170319060300) do
   create_table "position_times", force: :cascade do |t|
     t.decimal  "latitude",   null: false
     t.decimal  "longitude",  null: false
-    t.datetime "time",       null: false
+    t.decimal  "trip_id"
+    t.datetime "time"
     t.string   "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "trips", force: :cascade do |t|
-    t.integer  "vehicle_id",      null: false
-    t.float    "distance",        null: false
-    t.float    "fuel_efficiency", null: false
+    t.integer  "moji_vehicle_id"
+    t.float    "distance"
+    t.float    "fuel_efficiency"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.float    "gas_used"
@@ -55,6 +56,8 @@ ActiveRecord::Schema.define(version: 20170319060300) do
   create_table "users", force: :cascade do |t|
     t.string   "first_name",                          null: false
     t.string   "last_name",                           null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"

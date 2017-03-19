@@ -1,9 +1,9 @@
 class CreateTrips < ActiveRecord::Migration[5.0]
   def change
     create_table :trips do |t|
-      t.integer :vehicle_id, null: false
-      t.integer :distance, null: false
-      t.integer :fuel_efficiency, null: false
+      t.integer :moji_vehicle_id
+      t.integer :distance
+      t.integer :fuel_efficiency
       t.timestamps
     end
   end
