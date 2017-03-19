@@ -18,12 +18,7 @@ class TripsController < ApplicationController
         end
       end
     end
-    @matches = TripMatch.where(user_one_id: current_user.id).or TripMatch.where(user_two_id: current_user.id)
-    if @matches.size <= 0
-      flash[:notice] = 'No Matches Found!'
-    end
-
-    render :matches
+    redirect_to trip_matches_path
   end
 
 end
