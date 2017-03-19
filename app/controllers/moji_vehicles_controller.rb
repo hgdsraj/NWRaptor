@@ -65,4 +65,5 @@ class MojiVehiclesController < ApplicationController
   def fetch_vehicle
     @vehicle = MojiVehicle.find(params[:id])
   end
+
 end

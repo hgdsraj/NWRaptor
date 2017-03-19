@@ -3,4 +3,5 @@ class StartPositionTime < PositionTime
 
   validates :type, presence: true, inclusion: { in: SUPPORTED_TYPES, message: "not a valid type" }
 
+
 end
