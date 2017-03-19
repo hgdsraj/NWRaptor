@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 table.matches-table {
+  margin-top: 20px;
   td, th {
     padding: 0 20px 0 20px;
   }
@@ -16,7 +17,4 @@ tr.confirmed {
 .datafield{
   opacity: 0.85;
   background-color: #2B2D2A;
-  -webkit-box-shadow: 28px 10px 25px 7px rgba(0,0,0,0.91);
-  -moz-box-shadow: 28px 10px 25px 7px rgba(0,0,0,0.91);
-  box-shadow: 28px 10px 25px 7px rgba(0,0,0,0.91);
 }

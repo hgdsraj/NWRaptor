@@ -3,10 +3,10 @@
   height: 100px;
   background-color:  #3f51b5;
   color: white;
-  -webkit-box-shadow: 0 8px 6px -6px #999;
-  -moz-box-shadow: 0 8px 6px -6px #999;
-  box-shadow: 0 8px 6px -6px #999;
-
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 5px solid white;
   .nav-items {
     width: inherit;
     height: inherit;
@@ -16,7 +16,6 @@
   .title {
     color:  white;
 	text-decoration: none;
-    padding-top: 1%;
     padding-left: 5%;
     line-height: 45px;
     font-weight: bold;
