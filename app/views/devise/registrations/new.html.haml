@@ -1,0 +1,38 @@
+.col-md-8.col-md-offset-2.text-center
+  %h2 Sign up
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = devise_error_messages!
+    .field
+      = f.label :first_name
+      %br/
+      = f.text_field :first_name
+    .field
+      = f.label :last_name
+      %br/
+      = f.text_field :last_name
+    .field
+      = f.label :email
+      %br/
+      = f.email_field :email, autofocus: true
+    .field
+      = f.label :api_key
+      %br/
+      = f.text_field :api_key
+    .field
+      = f.label :password
+      - if @minimum_password_length
+        %em
+      (#{@minimum_password_length} characters minimum)
+      %br/
+      = f.password_field :password, autocomplete: "off"
+    .field
+      = f.label :password_confirmation
+      %br/
+      = f.password_field :password_confirmation, autocomplete: "off"
+    .field
+      = label_tag :no_flame, 'I agree to not harass users of this app'
+      = check_box_tag :no_flame, autocomplete: "off"
+    .actions
+      = f.submit "Sign up", class: 'btn btn-primary'
+  = render "devise/shared/links"
+
