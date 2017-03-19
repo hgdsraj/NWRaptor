@@ -2,8 +2,8 @@
 
 %body
   %div.row
-    %button.my-stats.btn-primary.btn-lg
-      = link_to 'My Stats', root_path, {:class => 'my-stats'}
+    %h3
+      =link_to "My Stats", stats_path, { :class=> "my-stats" }
   %div.row
     %h3
       = link_to 'Find Nearby', nearby_path, {:class => 'find-nearby'}

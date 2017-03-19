@@ -3,4 +3,8 @@ class HomepageController < ApplicationController
   end
   def nearby
   end
+  def stats
+  end
 end
+
+

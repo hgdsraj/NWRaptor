@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   }
   root 'homepage#index'
   get '/nearby', to: 'homepage#nearby'
+  get '/stats',   to: 'homepage#stats'
 end
+
