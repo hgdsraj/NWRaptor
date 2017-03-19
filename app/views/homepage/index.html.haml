@@ -2,7 +2,8 @@
 
 %body
   %div.row
-    %button.my-stats.btn-primary.btn-lg My Stats
+    %button.my-stats.btn-primary.btn-lg
+      %a.stats  My Stats
   %div.row
-    %button.find-nearby.btn-primary.btn-lg Find Nearby
-
+    %button.find-nearby.btn-primary.btn-lg
+      = link_to 'Find Nearby', root_path, {:class='find-nearby'}
