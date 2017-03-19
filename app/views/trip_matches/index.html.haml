@@ -1,7 +1,8 @@
 .col-md-8.col-md-offset-2
-  %table.matches-table
+  %table.matches-table.datafield.center-block
     %tbody
       %tr
+        %th
         %th
           Trip Id
         %th
@@ -22,6 +23,7 @@
         - else
           - confirmed = 'unconfirmed'
         %tr{class: confirmed}
+          %td
           %td
             = m.id
           %td
@@ -50,6 +52,7 @@
 
           %td.accept-cell
             = link_to 'Accept', accept_match_path(id: m.id), class: 'btn btn-primary' unless both_confirmed
+      %tr
     - else
       .row
         No matches

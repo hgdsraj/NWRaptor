@@ -1,18 +1,19 @@
 // This page is reached after the user is logged in
 
 
-.col-md-8.col-md-offset-2.text-center
+.text-center.formdiv.center-block
   - if current_user
+
     %div.row
       %h3
-        =link_to "My Stats", stats_path, class: 'btn btn-primary'
+        =link_to "My Stats", stats_path, class: 'btn btn-primary2'
     %div.row
       %h3
-        = link_to 'Find Nearby', get_matches_path, class: 'btn btn-primary'
+        = link_to 'Find Nearby', get_matches_path, class: 'btn btn-primary2'
     %div.row
       %h3
-        = link_to 'My Matches', trip_matches_path, class: 'btn btn-primary'
+        = link_to 'My Matches', trip_matches_path, class: 'btn btn-primary2'
     %div.row
       %h3
-        = link_to 'Import Trips', import_vehicles_path, class: 'btn btn-primary'
+        = link_to 'Import Trips', import_vehicles_path, class: 'btn btn-primary2'
 

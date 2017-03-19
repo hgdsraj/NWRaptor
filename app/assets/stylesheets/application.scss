@@ -18,16 +18,45 @@
 body {
   background-color: #EFEFEF;
   margin: 0;
+  background-image: image_url('city.png');
+  color: whitesmoke;
+  input {
+    color: black;
+  }
 }
 .content {
   width: 100%;
 }
 
 .col-md-12 {
-  margin-top: 100px;
+  margin-top: 20px;
 
 }
 
 .field {
   padding: 10px;
+}
+
+.formdiv {
+  opacity: 0.85;
+  background-color: #2B2D2A;
+  width: 400px;
+  -webkit-box-shadow: 28px 10px 25px 7px rgba(0,0,0,0.91);
+  -moz-box-shadow: 28px 10px 25px 7px rgba(0,0,0,0.91);
+  box-shadow: 28px 10px 25px 7px rgba(0,0,0,0.91);
+
+}
+
+.field{
+  opacity: 1;
+}
+
+.statsfield{
+  width: 800px;
+  text-align: center;
+  opacity: 0.85;
+  background-color: #2B2D2A;
+  -webkit-box-shadow: 28px 10px 25px 7px rgba(0,0,0,0.91);
+  -moz-box-shadow: 28px 10px 25px 7px rgba(0,0,0,0.91);
+  box-shadow: 28px 10px 25px 7px rgba(0,0,0,0.91);
 }
