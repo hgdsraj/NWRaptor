@@ -41,7 +41,7 @@
             = other_user_confirmed == nil ? 'False' : other_user_confirmed.to_s.capitalize
           %td
             - if both_confirmed
-              = other_user&.email
+              = other_user.email if other_user
             - else
               Both users must confirm!
           %td
