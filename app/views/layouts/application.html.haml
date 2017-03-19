@@ -15,7 +15,8 @@
       - if alert
         %p.alert.alert-danger= alert
     -# yield contains everything important
-    %div.login-info
-      = yield
+    .row.content
+      .col-md-12
+        = yield
 
     = render 'layouts/footer'

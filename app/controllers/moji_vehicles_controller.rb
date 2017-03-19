@@ -28,11 +28,14 @@ class MojiVehiclesController < ApplicationController
 # Get specific header
 
     json_response = JSON.parse(response.body)
-
+    unless json_response
+      flash[:alert] = "No vehicles found."
+      return redirect_to root_url
+    end
     json_response['Data'].each do |response|
       ActiveRecord::Base.transaction do
         unless StartPositionTime.find_by(time: Time.parse(response['StartTimestamp']))
-          @vehicle = MojiVehicle.find_by(moji_vehicle_id: response['VehicleId']) || MojiVehicle.create!(moji_vehicle_id: response['VehicleId'])
+          @vehicle = MojiVehicle.find_by(moji_vehicle_id: response['VehicleId']) || MojiVehicle.create!(moji_vehicle_id: response['VehicleId'], fuel_efficiency: response['FuelEfficiency'])
           distance = response['EndOdometer']['Value']
           gas_used = distance/response['FuelEfficiency']['BaseValue']/1000
           @trip = Trip.create!(moji_vehicle_id: @vehicle.id, fuel_efficiency: response['FuelEfficiency']['BaseValue'], distance: distance, gas_used: gas_used)
