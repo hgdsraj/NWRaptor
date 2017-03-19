@@ -32,7 +32,6 @@ class HomepageController < ApplicationController
     end
     @distance = total_distance / 1000
     @money = (@distance / @fuel) * 1.30
->>>>>>> e600d27ac3941ece32a23abef3fcd8cf4a7f7d16
   end
 
   def nearby
