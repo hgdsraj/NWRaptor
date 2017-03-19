@@ -4,4 +4,5 @@ Rails.application.routes.draw do
       registrations: 'users/registrations'
   }
   root 'homepage#index'
+  get '/stats',   to: 'homepage#stats'
 end
