@@ -3,7 +3,7 @@
 %body
   %div.row
     %button.my-stats.btn-primary.btn-lg
-      %a.stats  My Stats
+      = link_to 'My Stats', root_path, {:class => 'my-stats'}
   %div.row
     %button.find-nearby.btn-primary.btn-lg
-      = link_to 'Find Nearby', root_path, {:class='find-nearby'}
+      = link_to 'Find Nearby', root_path, {:class => 'find-nearby'}
