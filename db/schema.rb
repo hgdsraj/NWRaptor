@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170319041733) do
+ActiveRecord::Schema.define(version: 20170319060300) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "matches", force: :cascade do |t|
+    t.integer  "user_one_id"
+    t.integer  "user_two_id"
+    t.boolean  "user_one_confirmed"
+    t.boolean  "user_two_confirmed"
+    t.integer  "user_one_trip_id"
+    t.integer  "user_two_trip_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
 
   create_table "moji_vehicles", force: :cascade do |t|
     t.integer  "user_id",         null: false
@@ -34,10 +45,11 @@ ActiveRecord::Schema.define(version: 20170319041733) do
 
   create_table "trips", force: :cascade do |t|
     t.integer  "vehicle_id",      null: false
-    t.integer  "distance",        null: false
-    t.integer  "fuel_efficiency", null: false
+    t.float    "distance",        null: false
+    t.float    "fuel_efficiency", null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.float    "gas_used"
   end
 
   create_table "users", force: :cascade do |t|
