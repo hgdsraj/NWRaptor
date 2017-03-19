@@ -1,6 +1,6 @@
 class CreateMatches < ActiveRecord::Migration[5.0]
   def change
-    create_table :matches do |t|
+    create_table :trip_matches do |t|
       t.integer  "user_one_id"
       t.integer  "user_two_id"
       t.boolean  "user_one_confirmed"
