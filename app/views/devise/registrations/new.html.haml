@@ -1,4 +1,4 @@
-.col-md-8.col-md-offset-2
+.col-md-8.col-md-offset-2.text-center
   %h2 Sign up
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     = devise_error_messages!
@@ -29,6 +29,12 @@
       = f.label :password_confirmation
       %br/
       = f.password_field :password_confirmation, autocomplete: "off"
+<<<<<<< HEAD
+=======
+    .field
+      = label_tag :no_flame, 'I agree to not harass users of this app'
+      = check_box_tag :no_flame, autocomplete: "off"
+>>>>>>> e600d27ac3941ece32a23abef3fcd8cf4a7f7d16
     .actions
       = f.submit "Sign up", class: 'btn btn-primary'
   = render "devise/shared/links"
