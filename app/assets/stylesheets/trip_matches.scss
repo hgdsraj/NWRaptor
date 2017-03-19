@@ -1,6 +1,17 @@
 // Place all the styles related to the matches_controller controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.table-dive {
+  width: inherit;
+}
+
+.matches-table {
+  width: inherit;
+  margin: auto;
+  margin-top: 10%;
+}
+
 table.matches-table {
   td, th {
     padding: 0 20px 0 20px;
