@@ -1,0 +1,55 @@
+.col-md-8.col-md-offset-4
+  %table.matches-table
+    %tbody
+      %tr
+        %th
+          Trip Id
+        %th
+          Have you confirmed
+        %th
+          Other user confirmed
+        %th
+          Other users email
+        %th
+          Distance Away
+        %th
+          Accept
+    - if @matches
+      - @matches.each do |m|
+        - both_confirmed = m.user_one_confirmed && m.user_two_confirmed
+        - if both_confirmed
+          - confirmed = 'confirmed'
+        - else
+          - confirmed = 'unconfirmed'
+        %tr{class: confirmed}
+          %td
+            = m.id
+          %td
+            - other_user_confirmed = 'False'
+            - other_user = nil
+            - if m.user_one_id == current_user.id && m.user_one_confirmed
+              True
+              - other_user_confirmed = m.user_two_confirmed
+              - other_user = User.find(m.user_one_id)
+            - elsif m.user_two_id == current_user.id && m.user_two_confirmed
+              True
+              - other_user_confirmed = m.user_one_confirmed
+              - other_user = User.find(m.user_one_id)
+            - else
+              False
+          %td
+            = other_user_confirmed == nil ? 'False' : other_user_confirmed.to_s.capitalize
+          %td
+            - if both_confirmed
+              = other_user.email if other_user
+            - else
+              Both users must confirm!
+          %td
+            - if both_confirmed
+              = distance(Trip.find(m.user_one_trip_id).start_position_time, Trip.find(m.user_two_trip_id).start_position_time)
+
+          %td.accept-cell
+            = link_to 'Accept', accept_match_path(id: m.id), class: 'btn btn-primary' unless both_confirmed
+    - else
+      .row
+        No matches

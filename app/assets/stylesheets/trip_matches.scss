@@ -1,0 +1,15 @@
+// Place all the styles related to the matches_controller controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table.matches-table {
+  td, th {
+    padding: 0 20px 0 20px;
+  }
+  tr {
+    height: 40px;
+    padding: 20px 0 20px 0;
+  }
+}
+tr.confirmed {
+  background-color: lawngreen;
+}

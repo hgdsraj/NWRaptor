@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root 'homepage#index'
   get 'import_vehicles' => 'moji_vehicles#add_vehicles'
   get 'get_matches' => 'trips#matches'
+  resources :trip_matches
+  get 'accept_match' => 'trip_matches#accept'
 
   resources :moji_vehicles
 
