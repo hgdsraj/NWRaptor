@@ -12,6 +12,7 @@ gem 'rabl'
 gem 'devise'
 gem 'angularjs-rails'
 gem 'jquery'
+gem "rails-erd"
 
 gem 'uglifier'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
