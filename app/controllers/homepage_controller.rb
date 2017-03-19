@@ -9,7 +9,6 @@ class HomepageController < ApplicationController
 
   private
 
-
   #   These following functions depends on user who logged in
 
   def get_fuel_efficiency
