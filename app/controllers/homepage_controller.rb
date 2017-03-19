@@ -31,7 +31,7 @@ class HomepageController < ApplicationController
       end
     end
     @distance = total_distance / 1000
-    @money = (@distance / @fuel) * 1.30
+    @money = ((@distance / @fuel) * 1.30).round(2)
   end
 
   def distance_traveled_this_week
