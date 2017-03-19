@@ -15,4 +15,15 @@ class User < ApplicationRecord
             format: { with: VALID_EMAIL_REGEX },
             uniqueness: { case_sensitive: false }
 
+  def trips
+    trips = []
+    moji_vehicles.each do |v|
+      v.trips.each do |t|
+        trips << t
+      end
+    end
+    trips
+  end
+
+
 end
