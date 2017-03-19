@@ -38,6 +38,7 @@
               - other_user_confirmed = m.user_one_confirmed
               - other_user = User.find(m.user_one_id)
             - else
+              - other_user_confirmed = m.user_one_confirmed || m.user_two_confirmed
               False
           %td
             = other_user_confirmed == nil ? 'False' : other_user_confirmed.to_s.capitalize

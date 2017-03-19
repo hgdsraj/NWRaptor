@@ -12,7 +12,7 @@ module TripMatchesHelper
             Math.sin(delta_lamda/2) * Math.sin(delta_lamda/2)
     c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
 
-    r * c
+    ((r * c) / 100000).round(2).to_s + ' km'
 
   end
 
