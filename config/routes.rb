@@ -4,4 +4,6 @@ Rails.application.routes.draw do
       registrations: 'users/registrations'
   }
   root 'homepage#index'
+  get 'import_vehicles' => 'moji_vehicles#add_vehicles'
+
 end

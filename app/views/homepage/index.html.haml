@@ -1,8 +1,10 @@
 // This page is reached after the user is logged in
-
-%body
+- if current_user
   %div.row
     %button.my-stats.btn-primary.btn-lg My Stats
   %div.row
     %button.find-nearby.btn-primary.btn-lg Find Nearby
+  %div.row
+    = link_to 'Import', import_vehicles_path, class: 'btn btn-primary'
+
 
