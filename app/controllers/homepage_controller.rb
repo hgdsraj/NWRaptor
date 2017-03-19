@@ -4,6 +4,7 @@ class HomepageController < ApplicationController
   def nearby
   end
   def stats
+	  get_fuel_efficiency
   end
 
   private
@@ -12,7 +13,6 @@ class HomepageController < ApplicationController
   #   These following functions depends on user who logged in
 
   def get_fuel_efficiency
-    @fuel = 5;
   end
 
   def get_saved_money
