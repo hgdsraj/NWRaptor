@@ -4,4 +4,7 @@ Rails.application.routes.draw do
       registrations: 'users/registrations'
   }
   root 'homepage#index'
+  get '/nearby', to: 'homepage#nearby'
+  get '/stats',   to: 'homepage#stats'
 end
+
