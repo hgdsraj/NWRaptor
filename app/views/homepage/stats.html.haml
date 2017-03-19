@@ -1,8 +1,11 @@
 %body.stats-page
-  %H3
-    Your average Fuel Efficiency this week is:
-    = puts @fuel
-  %H3
-    Money saved if carpooling this week
-  %H3
-    Distance Traveled
+  - current_user.moji_vehicles.each do |v|
+    %H2
+    =v.moji_vehicle_id
+    %H3
+      Your average Fuel Efficiency this week is: 
+      = v.fuel_efficiency
+    %H3
+      Money saved if carpooling this week
+    %H3
+      Distance Traveled
