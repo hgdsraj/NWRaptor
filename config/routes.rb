@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root 'homepage#index'
   get 'import_vehicles' => 'moji_vehicles#add_vehicles'
 
+  resources :moji_vehicles
+
   get '/nearby', to: 'homepage#nearby'
   get '/stats',   to: 'homepage#stats'
 end

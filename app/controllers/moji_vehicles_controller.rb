@@ -4,6 +4,13 @@ require 'json'
 
 class MojiVehiclesController < ApplicationController
   before_action :authenticate_user!
+  before_action :fetch_all_vehicles, only: :index
+  before_action :fetch_vehicle, only: :show
+  def index
+  end
+
+  def show
+  end
 
   def add_vehicles
 
@@ -49,5 +56,13 @@ class MojiVehiclesController < ApplicationController
     @trip.end_position_time = @end_position
     @vehicle.trips << @trip
     current_user.moji_vehicles << @vehicle
+  end
+
+  def fetch_all_vehicles
+    @vehicles ||= current_user.moji_vehicles
+  end
+
+  def fetch_vehicle
+    @vehicle = MojiVehicle.find(params[:id])
   end
 end
