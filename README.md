@@ -8,10 +8,8 @@ Note: Requires [Mojio](http://moj.io/) hardware.
  	 
 ### Download Source Code
  	 
-`git clone https://github.com/DarienFlamont/Assignment2cmpt276.git`
+`git clone https://github.com/hgdsraj/NWRaptor.git`
  	 
 ### Run Server
  	 
-Unix: `bin/rails server`
-
-Windows: `ruby bin\rails server`
+`rails s`
